@@ -7,362 +7,351 @@
     <x>0</x>
     <y>0</y>
     <width>609</width>
-    <height>483</height>
+    <height>525</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>WiiScouter</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QTabWidget" name="mainTabs">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>80</y>
-      <width>581</width>
-      <height>321</height>
-     </rect>
-    </property>
-    <property name="currentIndex">
-     <number>0</number>
-    </property>
-    <widget class="QWidget" name="setupTab">
-     <attribute name="title">
-      <string>Match Setup</string>
-     </attribute>
-     <widget class="QWidget" name="gridLayoutWidget">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>571</width>
-        <height>291</height>
-       </rect>
-      </property>
-      <layout class="QGridLayout" name="gridLayout">
-       <item row="3" column="0">
-        <widget class="QFrame" name="red3Frame">
-         <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
-         </property>
-         <widget class="QLabel" name="label_3">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>10</y>
-            <width>101</width>
-            <height>17</height>
-           </rect>
-          </property>
+   <layout class="QVBoxLayout" name="verticalLayout_13">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLabel" name="label_9">
           <property name="text">
+           <string>Venue</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="matchNumberLabel">
+          <property name="text">
+           <string>Match Number</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="matchTimerLabel">
+          <property name="text">
+           <string>Match Timer</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QComboBox" name="venueComboBox">
+          <item>
+           <property name="text">
+            <string>Pacific Northwest Regional</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Microsoft Seattle Regional</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Sacramento Davis Regional</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Championships</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <spacer name="horizontalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="matchLabelEdit">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="echoMode">
+             <enum>QLineEdit::Normal</enum>
+            </property>
+            <property name="readOnly">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLCDNumber" name="matchTimer">
+            <property name="smallDecimalPoint">
+             <bool>false</bool>
+            </property>
+            <property name="numDigits">
+             <number>5</number>
+            </property>
+            <property name="segmentStyle">
+             <enum>QLCDNumber::Outline</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QTabWidget" name="gameTabs">
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <widget class="QWidget" name="setupTab">
+       <attribute name="title">
+        <string>Match Setup</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="2" column="0">
+         <widget class="QGroupBox" name="groupBox">
+          <property name="title">
            <string>Red Alliance 3</string>
           </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QLabel" name="label_3">
+             <property name="text">
+              <string>Team Number:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLCDNumber" name="lcdNumber_2">
+             <property name="value" stdset="0">
+              <double>1359.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+          </layout>
          </widget>
-         <widget class="QLCDNumber" name="lcdNumber_2">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>50</y>
-            <width>101</width>
-            <height>31</height>
-           </rect>
-          </property>
-          <property name="value" stdset="0">
-           <double>1359.000000000000000</double>
-          </property>
-         </widget>
-        </widget>
-       </item>
-       <item row="2" column="0">
-        <widget class="QFrame" name="red2Frame">
-         <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
-         </property>
-         <widget class="QLabel" name="label_2">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>10</y>
-            <width>91</width>
-            <height>17</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>Red Alliance 2</string>
-          </property>
-         </widget>
-         <widget class="QLCDNumber" name="lcdNumber">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>50</y>
-            <width>111</width>
-            <height>31</height>
-           </rect>
-          </property>
-          <property name="value" stdset="0">
-           <double>997.000000000000000</double>
-          </property>
-         </widget>
-        </widget>
-       </item>
-       <item row="0" column="0">
-        <widget class="QFrame" name="red1Frame">
-         <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
-         </property>
-         <widget class="QLabel" name="label">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>7</y>
-            <width>91</width>
-            <height>20</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>Red Alliance 1</string>
-          </property>
-         </widget>
-         <widget class="QLCDNumber" name="red1Number">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>50</y>
-            <width>111</width>
-            <height>31</height>
-           </rect>
-          </property>
-          <property name="value" stdset="0">
-           <double>955.000000000000000</double>
-          </property>
-         </widget>
-        </widget>
-       </item>
-       <item row="2" column="1">
-        <widget class="QFrame" name="blue2Frame">
-         <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
-         </property>
-         <widget class="QLCDNumber" name="lcdNumber_4">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>50</y>
-            <width>101</width>
-            <height>31</height>
-           </rect>
-          </property>
-          <property name="value" stdset="0">
-           <double>968.000000000000000</double>
-          </property>
-         </widget>
-         <widget class="QLabel" name="label_5">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>10</y>
-            <width>91</width>
-            <height>17</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>Blue Alliance 2</string>
-          </property>
-         </widget>
-        </widget>
-       </item>
-       <item row="3" column="1">
-        <widget class="QFrame" name="blueFrame3">
-         <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
-         </property>
-         <widget class="QLCDNumber" name="lcdNumber_3">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>50</y>
-            <width>101</width>
-            <height>31</height>
-           </rect>
-          </property>
-          <property name="value" stdset="0">
-           <double>254.000000000000000</double>
-          </property>
-         </widget>
-         <widget class="QLabel" name="label_6">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>10</y>
-            <width>101</width>
-            <height>17</height>
-           </rect>
-          </property>
-          <property name="text">
+        </item>
+        <item row="2" column="1">
+         <widget class="QGroupBox" name="groupBox_2">
+          <property name="title">
            <string>Blue Alliance 3</string>
           </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_6">
+           <item>
+            <widget class="QLabel" name="label_5">
+             <property name="text">
+              <string>Team Number:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLCDNumber" name="lcdNumber_4">
+             <property name="value" stdset="0">
+              <double>968.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+          </layout>
          </widget>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QFrame" name="blue1Frame">
-         <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
-         </property>
-         <widget class="QLCDNumber" name="lcdNumber_5">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>50</y>
-            <width>101</width>
-            <height>31</height>
-           </rect>
+        </item>
+        <item row="1" column="0">
+         <widget class="QGroupBox" name="groupBox_3">
+          <property name="title">
+           <string>Red Alliance 2</string>
           </property>
-          <property name="value" stdset="0">
-           <double>22.000000000000000</double>
-          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_7">
+           <item>
+            <widget class="QLabel" name="label_4">
+             <property name="text">
+              <string>Team Number:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLCDNumber" name="lcdNumber">
+             <property name="value" stdset="0">
+              <double>997.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+          </layout>
          </widget>
-         <widget class="QLabel" name="label_4">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>10</y>
-            <width>91</width>
-            <height>17</height>
-           </rect>
+        </item>
+        <item row="1" column="1">
+         <widget class="QGroupBox" name="groupBox_4">
+          <property name="title">
+           <string>Red Alliance 3</string>
           </property>
-          <property name="text">
+          <layout class="QHBoxLayout" name="horizontalLayout_8">
+           <item>
+            <widget class="QLabel" name="label_6">
+             <property name="text">
+              <string>Team Number:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLCDNumber" name="lcdNumber_3">
+             <property name="value" stdset="0">
+              <double>254.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QGroupBox" name="groupBox_5">
+          <property name="title">
+           <string>Red Alliance 1</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_5">
+           <item>
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>Team Number:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLCDNumber" name="red1Number">
+             <property name="value" stdset="0">
+              <double>955.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QGroupBox" name="groupBox_6">
+          <property name="title">
            <string>Blue Alliance 1</string>
           </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_9">
+           <item>
+            <widget class="QLabel" name="label_2">
+             <property name="text">
+              <string>Team Number:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLCDNumber" name="lcdNumber_5">
+             <property name="value" stdset="0">
+              <double>22.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+          </layout>
          </widget>
-        </widget>
-       </item>
-      </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="autoTab">
+       <attribute name="title">
+        <string>Autonomous Mode</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <widget class="QGroupBox" name="groupBox_7">
+          <property name="title">
+           <string>GroupBox</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QGroupBox" name="groupBox_8">
+          <property name="title">
+           <string>GroupBox</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QGroupBox" name="groupBox_9">
+          <property name="title">
+           <string>GroupBox</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QGroupBox" name="groupBox_10">
+          <property name="title">
+           <string>GroupBox</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QGroupBox" name="groupBox_11">
+          <property name="title">
+           <string>GroupBox</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QGroupBox" name="groupBox_12">
+          <property name="title">
+           <string>GroupBox</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="mainTab">
+       <attribute name="title">
+        <string>Teleoperated Mode</string>
+       </attribute>
+      </widget>
      </widget>
-    </widget>
-    <widget class="QWidget" name="autoTab">
-     <attribute name="title">
-      <string>Autonomous Mode</string>
-     </attribute>
-    </widget>
-   </widget>
-   <widget class="QLCDNumber" name="matchTimer">
-    <property name="geometry">
-     <rect>
-      <x>470</x>
-      <y>10</y>
-      <width>101</width>
-      <height>31</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="matchTimerLabel">
-    <property name="geometry">
-     <rect>
-      <x>370</x>
-      <y>10</y>
-      <width>81</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Match Timer</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="matchNumberLabel">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>10</y>
-      <width>91</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Match Number</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_9">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>40</y>
-      <width>60</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Venue</string>
-    </property>
-   </widget>
-   <widget class="QComboBox" name="venueComboBox">
-    <property name="geometry">
-     <rect>
-      <x>120</x>
-      <y>40</y>
-      <width>211</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <item>
-     <property name="text">
-      <string>Pacific Northwest Regional</string>
-     </property>
     </item>
-    <item>
-     <property name="text">
-      <string>Microsoft Seattle Regional</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Sacramento Davis Regional</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Championships</string>
-     </property>
-    </item>
-   </widget>
-   <widget class="QLineEdit" name="matchLabelEdit">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>120</x>
-      <y>10</y>
-      <width>113</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="echoMode">
-     <enum>QLineEdit::Normal</enum>
-    </property>
-    <property name="readOnly">
-     <bool>true</bool>
-    </property>
-   </widget>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
