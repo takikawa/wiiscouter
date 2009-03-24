@@ -43,7 +43,10 @@ void WiiScouter::databaseSetup(void)
     bool opened = db.open();
 
     if (!opened)
-        statusBar()->showMessage(tr("Failed to open database"));
+    {
+        statusBar()->showMessage("Database: " + db.lastError().databaseText() +
+                                 " Driver: " + db.lastError().driverText());
+    }
 }
 
 void WiiScouter::timerEvent(QTimerEvent* timerEvent)
@@ -55,7 +58,7 @@ void WiiScouter::timerEvent(QTimerEvent* timerEvent)
     switch (curTime)
     {
         case AUTONOMOUS_END:
-            ui->mainTabs->setCurrentWidget(ui->autoTab);
+            ui->gameTabs->setCurrentWidget(ui->autoTab);
             statusBar()->showMessage(tr("Switching to autonomous mode"));
             break;
         case MATCH_END:
@@ -63,6 +66,10 @@ void WiiScouter::timerEvent(QTimerEvent* timerEvent)
             killTimer(timerEvent->timerId());
             break;
     }
+}
+
+void WiiScouter::wiimoteButtonHandler()
+{
 }
 
 void WiiScouter::on_actionFind_Wiimotes_triggered()

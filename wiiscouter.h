@@ -41,6 +41,7 @@ signals:
     void receivedWiimote(void);
 
 private slots:
+    void wiimoteButtonHandler();
     void on_actionSchedule_Editor_triggered();
     void on_actionQuit_triggered();
     void on_actionStart_Match_triggered();
